@@ -1,0 +1,6 @@
+numpy
+docopt
+seaborn
+sklearn
+matplotlib
+googletrans

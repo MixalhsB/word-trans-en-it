@@ -14,12 +14,12 @@ def translate_text(text, list_of_servers, src_language='it', dest_language='en')
         translation = translator.translate(text=text, dest=dest_language)
     except:
         print('exception! deconnecting from VPN')
-        process = subprocess.Popen(['nordvpn', '-d'], shell = True ,stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        process = subprocess.Popen(['nordvpn', '-d'], shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         process.wait()
         time.sleep(5)
         srv = select_server(list_of_servers)
         print('selecting VPN server "'+ srv + '" and connecting')
-        process = subprocess.Popen(['nordvpn', '-c', '-g', srv], shell = True ,stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        process = subprocess.Popen(['nordvpn', '-c', '-g', srv], shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         process.wait()
         time.sleep(10)
         return translate_text(text=text, dest_language=dest_language)
@@ -116,8 +116,6 @@ def main():
                 unique_pairs.append((en_word, it_word))
         assert path.exists('data/english.subset.388.dm')
         assert path.exists('data/italian.subset.388.dm')
-    
-    # TODO this is fine maybe, don't forget to report dialectics, more prints (optional), rename matching file (1000 missverst.)?
     
     return unique_pairs
 

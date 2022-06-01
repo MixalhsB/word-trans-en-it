@@ -6,7 +6,7 @@ Usage:
   plsr_regression.py --version
 
 Options:
-  --ncomps=<n>   Number of principal components
+  --ncomps=<n>   Number of principal components; or "0" in order to run hyperparameter search
   --nns=<n>      Number of nearest neighbours for the evaluation
   -h --help      Show this screen.
   --version      Show version.
@@ -15,10 +15,13 @@ Options:
 """
 
 from docopt import docopt
-import numpy as np
-import utils
-import random # for shuffled cross-val.. TODO
+from matplotlib import pyplot as plt
 from sklearn.cross_decomposition import PLSRegression
+import json
+import utils
+import warnings
+import numpy as np
+import seaborn as sns
 
 
 def mk_training_matrices(pairs, en_dimension, it_dimension, english_space, italian_space):
@@ -36,17 +39,52 @@ def mk_training_matrices(pairs, en_dimension, it_dimension, english_space, itali
 def PLSR(mat_english, mat_italian, ncomps):
     plsr = PLSRegression(n_components=ncomps)
     plsr.fit(mat_english, mat_italian)
-    return plsr 
+    return plsr
 
 
-if __name__ == '__main__':
+def run_cross_validation(ncomps, nns, verbose, english_space, italian_space, all_pairs):   
+    np.random.seed(0)
+    np.random.shuffle(all_pairs)
+    min_test_size = len(all_pairs) // 5
+    add = [1 for _ in range(len(all_pairs) - min_test_size * 5)]
+    add += [0 for _ in range(5 - len(add))]
+    shift = 0
+    precisions = []
+    for round in range(5):
+        test_size = min_test_size + add[round]
+        test_pairs = all_pairs[shift : shift + test_size]
+        training_pairs = all_pairs[: shift] + all_pairs[shift + test_size :]
+        shift += test_size
+        en_mat, it_mat = mk_training_matrices(training_pairs, 300, 300, english_space, italian_space)
+        plsr = PLSR(en_mat, it_mat, ncomps)
+        print('-> cross-validation round', round + 1, '/', 5)
+        score = 0
+        for p in test_pairs:
+            en, it = p.split()
+            predicted_vector = plsr.predict(english_space[en].reshape(1, -1))[0]
+            nearest_neighbours = utils.neighbours(italian_space, predicted_vector, nns)
+            if it in nearest_neighbours:
+                score += 1
+                if verbose:
+                    print(en, it, nearest_neighbours, '1')
+            else:
+                if verbose:
+                    print(en, it, nearest_neighbours, '0')
+        precisions.append(score / len(test_pairs))
+    return np.mean(precisions)
+
+
+def main():
+    '''Verify given arguments'''
+    warnings.filterwarnings('ignore')
     args = docopt(__doc__, version='PLSR regression for word translation 1.1')
     ncomps = int(args['--ncomps'])
     nns = int(args['--nns'])
     verbose = False
     if args['--verbose']:
         verbose = True
-
+    assert ncomps >= 0 and nns >= 1
+    
     '''Read semantic spaces'''
     english_space = utils.readDM('data/english.subset.388.dm')
     italian_space = utils.readDM('data/italian.subset.388.dm')
@@ -58,29 +96,26 @@ if __name__ == '__main__':
         l = l.rstrip('\n')
         all_pairs.append(l)
     f.close()
+    
+    '''Initiate PLSR cross-validation'''
+    if ncomps:
+        avg_precision = run_cross_validation(ncomps, nns, verbose, english_space, italian_space, all_pairs)
+        print('Avg. precision PLSR:', avg_precision)
+        return {(ncomps, nns): avg_precision}
+    else: # run hyper-parameter search
+        X, Y = [x for x, _ in stored_avg_precisions], [y for y in stored_avg_precisions.values()]
+        _ = sns.lineplot(x='Number of components', y='Precision @ 5',
+                         data={'Number of components': X, 'Precision @ 5': Y})
+        data_output_filename = 'ncomps-precision-values_nns=' + str(nns) + '.json'
+        with open(data_output_filename, 'w', encoding='utf-8') as f:
+            f.write(json.dumps({str((ncomps, nns)) : stored_avg_precisions[ncomps, nns] for ncomps, nns in stored_avg_precisions},
+                    indent = 4, ensure_ascii=False))
+        print('Saved precision values to ./' + data_output_filename)
+        fig_output_filename = 'ncomps-precision-plot_nns=' + str(nns) + '.pdf'
+        plt.savefig(fig_output_filename, bbox_inches='tight')
+        print('Saved summarising plot to ./' + fig_output_filename)
+        return stored_avg_precisions
 
-    '''Make training/test fold'''
-    random.shuffle(all_pairs) # shuffled cross val.
-    training_pairs = all_pairs[:310] # correct numbers bla
-    test_pairs = all_pairs[311:]
 
-    '''Make training/test matrices and get PLSR model'''
-    en_mat, it_mat = mk_training_matrices(training_pairs, 300, 300, english_space, italian_space)
-    plsr = PLSR(en_mat, it_mat, ncomps)
-
-    ''' Predict with PLSR'''
-    score = 0
-    for p in test_pairs:
-        en, cat = p.split()
-        predicted_vector = plsr.predict(english_space[en].reshape(1,-1))[0]
-        #print(predicted_vector[:20])
-        nearest_neighbours = utils.neighbours(italian_space, predicted_vector, nns)
-        if cat in nearest_neighbours:
-            score+=1
-            if verbose:
-                print(en,cat,nearest_neighbours, '1')
-        else:
-            if verbose:
-                print(en,cat,nearest_neighbours, '0')
-
-    print('Precision PLSR:', score / len(test_pairs))
+if __name__ == '__main__':
+    result_dict = main()
