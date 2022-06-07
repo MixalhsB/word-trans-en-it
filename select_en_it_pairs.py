@@ -11,7 +11,7 @@ def select_server(l):
 def translate_text(text, list_of_servers, src_language='it', dest_language='en'):
     translator = Translator()
     try:
-        translation = translator.translate(text=text, dest=dest_language)
+        translation = translator.translate(text=text, src=src_language, dest=dest_language)
     except:
         print('exception! deconnecting from VPN')
         process = subprocess.Popen(['nordvpn', '-d'], shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
@@ -64,6 +64,7 @@ def main():
     if not path.exists('data/pairs_en_it.txt'):
         print('Loading in EN-WIKI words ... (might take a while)')
         words_en_all = {}
+
         with open('data/enwiki_20180420_300d.txt', 'r', encoding='utf-8') as f:
             for i, line in enumerate(f):
                 word, vector_string = line.split(' ', 1)
@@ -78,10 +79,8 @@ def main():
                 else:
                     en_word_counts[en_word] += 1
         
-        manually_selected_bad_pairs = [('are', 'su'), ('with', 'se'), ('lap', 'volta'), ('who', 'qui'), ('not', 'ora'),
-                                       ('party', 'parti'), ('cottage', 'prese'), ('thousand', 'mano'), ('set', 'sette'),
-                                       ('decisive', 'decise'), ('almost', 'casi'), ('see', 'sé'), ('discovery', 'scoperto'),
-                                       ('rarely', 'reti'), ('step', 'passò'), ('port', 'portò'), ('within', 'entrò')]
+        manually_selected_bad_pairs = [('cottage', 'prese'), ('environment', 'intorno'), ('discovery', 'scoperto'),
+                                       ('treatment', 'tratto'), ('step', 'passò'), ('near', 'cerca'), ('within', 'entrò')]
         
         for en_word, it_word in raw_pairs:
             if en_word_counts[en_word] == 1:
@@ -101,11 +100,11 @@ def main():
                 if words_en_all[word] == i and word in en_words_in_unique_pairs:
                     words_en_matched_w2v[word] = vector_string
         
-        with open('data/english.subset.388.dm', 'w', encoding='utf-8') as f:
+        with open('data/english.subset.493.dm', 'w', encoding='utf-8') as f:
             for word_en, _ in unique_pairs:
                 f.write(word_en + ' ' + words_en_matched_w2v[word_en])
         
-        with open('data/italian.subset.388.dm', 'w', encoding='utf-8') as f:
+        with open('data/italian.subset.493.dm', 'w', encoding='utf-8') as f:
             for _, word_it in unique_pairs:
                 f.write(word_it + ' ' + words_it_original_w2v[word_it])
         
@@ -114,8 +113,8 @@ def main():
             for line in f:
                 en_word, it_word = line.rstrip('\n').split(' ')
                 unique_pairs.append((en_word, it_word))
-        assert path.exists('data/english.subset.388.dm')
-        assert path.exists('data/italian.subset.388.dm')
+        assert path.exists('data/english.subset.493.dm')
+        assert path.exists('data/italian.subset.493.dm')
     
     return unique_pairs
 

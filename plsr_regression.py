@@ -86,8 +86,8 @@ def main():
     assert ncomps >= 0 and nns >= 1
     
     '''Read semantic spaces'''
-    english_space = utils.readDM('data/english.subset.388.dm')
-    italian_space = utils.readDM('data/italian.subset.388.dm')
+    english_space = utils.readDM('data/english.subset.493.dm')
+    italian_space = utils.readDM('data/italian.subset.493.dm')
     
     '''Read all word pairs'''
     all_pairs = []
@@ -103,6 +103,14 @@ def main():
         print('Avg. precision PLSR:', avg_precision)
         return {(ncomps, nns): avg_precision}
     else: # run hyper-parameter search
+        stored_avg_precisions = {}
+        for ncomps in range(10, len(all_pairs), 10):
+            try:
+                print('\nTrying', ncomps, 'components ...')
+                stored_avg_precisions[ncomps, nns] = run_cross_validation(ncomps, nns, verbose, english_space, italian_space, all_pairs)
+                print('Avg. precision PLSR:', stored_avg_precisions[ncomps, nns])
+            except ValueError:
+                print('Already too many components! Exiting loop.')
         X, Y = [x for x, _ in stored_avg_precisions], [y for y in stored_avg_precisions.values()]
         _ = sns.lineplot(x='Number of components', y='Precision @ 5',
                          data={'Number of components': X, 'Precision @ 5': Y})

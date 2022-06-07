@@ -1,117 +1,117 @@
 from
-e
-il
+And
 the
+there
 in
-a
+to
 of the
 that
 is
-and
-from the
-per
-in the
-con
 a
-i
-and
-and
+of the
+for
+in the
+with
+a
 the
-al
+from
+yes
+the
+to the
 of the
 at the
-come
+how
 in
-non
-dal
-ha
+Not
 from the
+has
+of the
 more
 also
 I am
-fu
+was
 the
-ad
-your
-ed
+to
+her
+and
 between
 his
-ma
-era
+but
+was
 after
-due
-lo
+two
+the
 from the
 which
 state
-o
+or
 part
-prima
+Before
 years
 of the
-are
-ai
+on
+to the
 to be
 this
 he comes
 They
 '
 came
-on the
+on
 one
 in the
-primo
+first
 to
 in
 city
-dove
+where is it
 while
-film
+movie
 during
-serie
+series
 then
 according to
-When
+when
 this
-solo
-from
+alone
+de
 on the
 until
 which
 other
-Name
-with
-stata
+first name
+self
+was
 three
-its
-the
-against
+his
+tea
+versus
 States
 same
 is
-dai
+come on
 they have
 common
-san
+San
 season
 had
 2
 following
 Very
-they were
+were
 of the
 group
 they were
-like this
-lap
+Like this
+time
 some
-fine
-grande
+end
+great
 in
 century
-tempo
+time
 can  
-guerra
+war
 that
 6
 all
@@ -125,56 +125,56 @@ that
 church
 furthermore
 Which
-vita
-circa
+life
+approximately
 beyond
 under
 4
 family
-new one
-sue
+new
+his
 give her
 other
 every
 national
 already
 these
-verso
+towards
 period
 world
 without
-aver
-But
-casa
-vi
-finale
+have
+However
+home
+you
+the final
 squad
 place
 of
 own
 At
-from
+between
 championship
-it is
+neither
 together
 title
 done
-via
+Street
 to
-his
-anno
+he
+year
 everything
 way
 history
 inhabitants
 5
-quattro
-italia
-l
-fa
+four
+Italy
+L
+does
 instead
 how much
-cause
+it causes
 death
 however
 new
@@ -184,53 +184,53 @@ someone
 %
 center
 in
-nord
+north
 find
 September
-maggio
+May
 thank you
 son
-re
+king
 general
 published
-roma
+Rome
 particular
 French
 >
-corso
+course
 June
 <
-tale
-many
-padre
+such
+lot of
+father
 region
-company
+society
 January
 July
 first
-–
-base
+-
+basis
 united
 form
-sud
+south
 long
-«
-»
+"
+"
 album
 10
-maggiore
+greater
 December
-marzo
+March
 system
 all
 7
-because
-bit
-specie
+Why
+little
+species
 case
 province
 Italian
-ii
+II
 term
 success
 November
@@ -244,7 +244,7 @@ respect
 2010
 world
 point
-allo
+at the
 role
 different
 km
@@ -255,7 +255,7 @@ kingdom
 subsequently
 February
 version
-gran
+large
 these
 2012
 career
@@ -263,7 +263,7 @@ October
 line
 located
 m
-campo
+field
 2009
 same
 2008
@@ -271,144 +271,144 @@ August
 mostly
 from
 on
-Work
+work
 2013
 inside of
 he had
-quasi
-”
-volte
+almost
+"
+times
 he became
 Italian
 production
 April
 day
-“
+"
 through
-giovanni
+John
 2007
-diverse
+different
 body
 government
-terra
+Earth
 people
-ben
+well
 country
 20
 that is
 8
-maria
-May
+Maria
+never
 2014
-ci
-chairman
+there
+president
 2006
-zone
+area
 population
 despite
 other
 15
 direct
 France
-studio
+study
 start
 came
-type
-col
+guy
+with the
 club
 °
 level
 12
-he
+they
 position
 new
-battaglia
+battle
 big
-time
-genre
+moment
+gender
 tournament
 works
 grade
-nowiki
+Nowiki
 2015
 state
-vittoria
-santa
+victory
+holy
 project
-sui
+on
 service
 it would have
 would be
 product
-gift
+here I'm
 proper
 railway station
 presence
 2005
 days
 did
-coppa
-far
-it were
-presents
+cup
+do
+is
+present
 single
-capo
+head
 place
-cinque
+five
 central
-a half
+half
 30
 young
 English
 greatest
-At that time
+so
 less
 present
 activities
-lei
-madre
+she
+mother
 third
 those
 b
-opera
+Opera
 2000
 game
-porta
+brings
 meters
 school
 that
 possible
-milano
+Milan
 military
 republic
 Street
-award
+prize
 16
 2004
-piano
+floor
 district
 9
 match
 Education
 anyway
-vari
+various
 18
-lingua
+language
 soccer
 wife
 men
 given
-have
-palazzo
+to have
+building
 points
-may be
+six
 11
 in the end
-musica
+music
 14
 immediately
 n
-carlo
+Charles
 daughter
 construction
 those
@@ -422,21 +422,21 @@ following
 international
 13
 river
-prime
-john
+first
+John
 brother
 2001
-we are
-donna
-who
-germania
+competition
+woman
+here
+Germany
 25
 many
 important
-is
-stile
+East
+style
 months
-fare
+Do
 development
 numerous
 book
@@ -450,19 +450,19 @@ county
 villages
 structure
 17
-policy
+politics
 public
 deals with
 song
 theater
-he must
+needs to
 return
 edition
 24
-castello
+castle
 teams
 training
-francesco
+Francis
 reality
 passage
 2003
@@ -470,100 +470,100 @@ important
 Strength
 sons
 American
-and
+and and
 division
 musical
 the year
-jobs
-previous
+works
+previous one
 program
 21
 law
 Research
-1º
+1st
 probably
-papa
+Pope
 so long as
 official
 some
-a.c
+B.C
 he succeeds
-noto
-forte
+known
+loud
 millions
-iii
-vista
+III
+view
 called
 2002
-piccolo
+small
 games
-data
+date
 phase
-not
-candies
+Now
+power
 members
 it begins
 classification
 through
 department
-pari
+even
 class
-york
+York
 at first
 common
 died
-tedesco
-disco
+German
+disk
 third
 front
-va
-so much
+it goes
+much
 &
 superior
 Start
 check
 origin
-outside
+out
 19
-monte
-protagonist
+Mountain
+hero
 together
-li
+there
 west
 matches
-situation
-That
+located
+it
 23
 net
 few
-personage
+character
 22
 won
 written
 Paris
-use
+Note
 historical
-ex
-brief
-forza
+former
+short
+force
 1999
-mare
-locale
-area
-giuseppe
+sea
+local
+surface
+Joseph
 following
 several
-luce
-party
+light
+set off
 from
-media
+average
 appointed
-decide
-testa
+decides
+head
 Sara
 unit
 match
-paolo
+Paul
 past
 !
 last
@@ -572,7 +572,7 @@ command
 group
 member
 movement
-near
+Neighbor
 right
 novel
 new
@@ -583,70 +583,70 @@ template
 that is
 troops
 property
-alto
-nato
-usa
+tall
+born
+use
 cottage
 1998
 2017
-pietro
+Peter
 both of them
 28
-personages
-valle
+characters
+Valley
 currently
 used
 v
-esso
+it
 process
 following
 category
 26
 video
-thousand
+but no
 the latter
-napoli
-cut
+Naples
+court
 motor
 small
 western
 maximum
 location
-museo
-lato
-piazza
+museum
+side
+square
 director
 27
 Oriental
-pur
+even though
 female
 he remained
-dio
+God
 occasion
 data
 month
-voce
-conte
-antonio
+voice
+with you
+Antonio
 best
 new
 left
 being
 capital
 1997
-sta
-lass
-europa
-mezzo
+is
+girl
+Europe
+half
 x
 s
 at this point
 they
 problems
-luigi
+Luigi
 diocese
 time
-romano
+Roman
 site
 festival
 100
@@ -654,7 +654,7 @@ said
 succeeded
 that is to say
 double
-donne
+women
 at the beginning
 space
 1996
@@ -663,29 +663,29 @@ company
 shift
 speed
 considered
-around
-massimo
+environment
+maximum
 mm
 scene
-just
-alta
+as soon as
+high
 elements
 contract
 size
 What
 original
-set
+seven
 direction
 decisive
-seen
+view
 completely
 league
-simile
+similar
 long
 London
 championships
-sale
-over it
+salt
+over
 call
 composed
 29
@@ -706,19 +706,19 @@ man
 1992
 guide
 1995
-d'oro
-venezia
+golden
+Venice
 real
 market
 it seems
-ore
+hours
 tennis
-nave
+ship
 night
-relationship
-almost
+report
+cases
 ]
-iv
+IV
 1990
 public
 load
@@ -729,7 +729,7 @@ cm
 result
 player
 played
-while
+although
 rather
 couple
 features
@@ -737,33 +737,33 @@ features
 rock
 he got
 culture
-get
+obtain
 officers
 right
-otto
-basso
+eight
+low
 50
 made
 comprehends
 relation
 defence
-quarto
+fourth
 such
-it becomes
+becomes
 1993
-chi
-costa
+who
+it costs
 episodes
 reference
 perhaps
 capacity
-l'Album
-presto
-principe
-see
-giro
-bianco
-vero
+the album
+soon
+prince
+self
+tour
+white
+real 
 social
 text
 show
@@ -783,14 +783,14 @@ in the meantime
 magazine
 31
 technique
-torino
-torre
-to reach
+Turin
+tower
+reach
 southern
-dell
+of
 marriage
 takes
-romana
+Roman
 founded
 election
 husband
@@ -799,31 +799,31 @@ park
 born
 discovery
 results
-to see
+see
 French
 came
 tradition
-campagna
-persona
+countryside
+person
 complex
-porto
+port
 channel
-gol
+goal
 products
-Format
+format
 known
 all
 subsequent
 television
 =
 carried
-firenze
-stella
+Florence
+star
 quality
-director
+movie director
 young
 acting
-lago
+the needle
 age
 treatment
 as well as
@@ -835,8 +835,8 @@ won
 next one
 figure
 choice
-rarely
-gare
+networks
+races
 unique
 used
 ten
@@ -847,85 +847,85 @@ effect
 fire
 better
 late
-world
+World
 capital
 cooperation
 Japan
 or
-lega
-duca
+League
+duke
 composed
 German
 village
 directly
 personnel
-david
+David
 rest
 there is
 sector
 promotion
 artists
-nero
+black
 police
-camera
+room
 obtained
 players
-d'america
+of America
 appears
 civil
-politico
-dice
+politic
+He says
 participated
 distance
-right
-vecchio
-marco
+Certain
+old
+Marco
 1989
 press
 military
 order
 radio
-sola
+lonely
 particularly
-they do
+do
 collection
 people
 d
-navi
-marina
-shape
+ships
+navy
+forms
 so
 record
 proper
-he passes
+passage
 belonging
 previous
 weapons
 tracks
-rosso
-vince
+red
+wins
 open
 seasons
-arriva
+he arrives
 difference
 songs
-find out
+discovers
 events
 medal
 greater
 direct
 step
 material
-find
+to find
 children
 appearances
 municipal
-ponte
-saint
-brothers
+bridge
+Saint
+siblings
 built
 neither
-fascia
+band
 path
 male
 Japanese
@@ -935,19 +935,19 @@ islands
 elected
 commander
 characterized
-company
+Company
 I count
 behind
 best
-taken
+taken 
 soldiers
-maestro
+master
 lesser
 they are
-america
+America
 too much
 drift
-fence
+near
 use
 trial
 birth
@@ -959,42 +959,42 @@ he participated
 sweater
 natural
 around
-amico
+friend
 holder
 improve
 short film
 the man
-madonna
+Madonna
 front
 port
 sample
 dedicated
 match
 1988
-change
+exchange
 at the time
 section
 40
-sole
-greco
-bambino
+Sun
+Greek
+baby
 united
-pace
+peace
 lines
 represents
-santo
+holy
 von
-regina
-cappella
+Queen
+chapel
 records
 sister
 World Cup
 1987
 churches
-latino
+Latin
 within
 get
-amici
+friends
 constituted
 future
-contains
+contain
