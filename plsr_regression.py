@@ -111,6 +111,7 @@ def main():
                 print('Avg. precision PLSR:', stored_avg_precisions[ncomps, nns])
             except ValueError:
                 print('Already too many components! Exiting loop.')
+                break
         X, Y = [x for x, _ in stored_avg_precisions], [y for y in stored_avg_precisions.values()]
         _ = sns.lineplot(x='Number of components', y='Precision @ 5',
                          data={'Number of components': X, 'Precision @ 5': Y})
